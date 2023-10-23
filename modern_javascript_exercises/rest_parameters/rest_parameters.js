@@ -1,9 +1,10 @@
 // Instructions can be found in rest_parameters.md
 
 // Add rest parameters here!
-export function add(a, b) {
+export function add(...numbers) {
   // Add a loop here
-  return a + b;
+  return numbers.reduce((total, num) => total + num, 0);
 }
 
-add(1, 2, 3, 4, 5);
+
+console.log(add(1, 2, 3, 4, 5));
